@@ -19,17 +19,21 @@
         	<a href="/myblog/login.php">Авторизация</a>
         </div>    
         <?php 
+        if(isset($_SESSION['logged'])){
         	if ($_SESSION['logged']) {
         		echo('<div class="col-1">
         				<a href="/myblog/scripts/logout.php"> | Выйти</a>
         			</div>'  );
         	}
+        }
         ?>
     	</div>
     	<?php  
+    	if(isset($_SESSION['logged'])){
     	if($_SESSION['logged'])
     	{
     		echo ('<a href="/myblog/scripts/newpost.php">Новая запись</a>');
+    	}
     	}
     	?>
 	<?php
